@@ -50,7 +50,7 @@ function isPointInImage(x: number, y: number) {
  * @param offChar - Character to render an
  * "off" pixel with.
  */
-function outputImage(onChar= "X", offChar= " ") {
+function outputImage(onChar = "X", offChar = " ") {
   let text = "";
 
   for (let i = 0; i < imageData.length; i++) {
@@ -96,9 +96,9 @@ function createImageData(): boolean[] {
  * 
  * @returns - dot
  */
-function drawDot(x : number, y : number) : void{
-  if (isPointInImage(x,y)) {
-     imageData[y * imageWidth + x]=true;
+function drawDot(x: number, y: number): void {
+  if (isPointInImage(x, y)) {
+    imageData[y * imageWidth + x] = true;
   }
 }
 
@@ -110,9 +110,9 @@ function drawDot(x : number, y : number) : void{
  * 
  * @returns - horizontal line
  */
-function drawHorizontalLine(x:number, y:number, length:number):void{
+function drawHorizontalLine(x: number, y: number, length: number): void {
   for (let i = x; i < x + length; i++) {
-    drawDot(i,y);
+    drawDot(i, y);
   }
 }
 
@@ -124,9 +124,9 @@ function drawHorizontalLine(x:number, y:number, length:number):void{
  * 
  * @returns - vertical line
  */
-function drawVerticalLine(x : number, y : number, length : number) : void{
-  for (let i = y; i < y + length; i++){
-    drawDot(x,i);
+function drawVerticalLine(x: number, y: number, length: number): void {
+  for (let i = y; i < y + length; i++) {
+    drawDot(x, i);
   }
 }
 

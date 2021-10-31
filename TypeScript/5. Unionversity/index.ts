@@ -18,29 +18,29 @@ type StudyGroup = {
 }
 
 type SearchEventsOptions = {
-  query : number|string,
-  eventType : 'courses' | 'groups',
+  query: number | string,
+  eventType: 'courses' | 'groups',
 }
 
-function searchEvents(options : SearchEventsOptions) {
-  let events : (Course | StudyGroup)[] = options.eventType === 'courses' ? courses : studyGroups;
- 
-   return events.filter((event :  Course | StudyGroup) => {
-      if (typeof options.query === 'number') {
-        return event.id === options.query;
-      }
-      if (typeof options.query === 'string') {
-        return event.keywords.includes(options.query);
-      }
-    })
+function searchEvents(options: SearchEventsOptions) {
+  let events: (Course | StudyGroup)[] = options.eventType === 'courses' ? courses : studyGroups;
+
+  return events.filter((event: Course | StudyGroup) => {
+    if (typeof options.query === 'number') {
+      return event.id === options.query;
+    }
+    if (typeof options.query === 'string') {
+      return event.keywords.includes(options.query);
+    }
+  })
 }
 
-let searchResults = searchEvents({query: 'art', eventType: 'courses'});
+let searchResults = searchEvents({ query: 'art', eventType: 'courses' });
 
 console.log(searchResults);
 
-let enrolledEvents : (Course | StudyGroup)[] =[];
-function enroll (event : Course | StudyGroup){
+let enrolledEvents: (Course | StudyGroup)[] = [];
+function enroll(event: Course | StudyGroup) {
   enrolledEvents.push(event);
 }
 enroll(searchResults[0])

@@ -1,24 +1,24 @@
 import products from './products';
 
-const productName : string = "beanie";
-const shippingAddress : string = "New York";
+const productName: string = "beanie";
+const shippingAddress: string = "New York";
 
-let shipping : number;
-let taxPercent : number;
-let taxTotal : number;
-let total : number;
+let shipping: number;
+let taxPercent: number;
+let taxTotal: number;
+let total: number;
 
 const product = products.filter(product => product.name === productName)[0];
 if (product.preOrder === true) {
   console.log("This is a pre-order item. You will be notified within an email when the package is sent.")
 }
 
-if (product.price>= 25) {
+if (product.price >= 25) {
   shipping = 0;
   console.log("Your product is over $25, you get a free shipping!");
 } else {
-   shipping = 5;
-   console.log(`You need to spend ${25-product.price} more to get free shipping`);
+  shipping = 5;
+  console.log(`You need to spend ${25 - product.price} more to get free shipping`);
 }
 
 if (shippingAddress.includes('New York')) {
