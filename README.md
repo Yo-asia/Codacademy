@@ -6,9 +6,9 @@ Included projects were completed as part of the codecademy trainings.
 2. Authorisation Form - React Components
 3. Random Color Picker - Components Interacting
 4. Social Network For Pets - Lifecycle Methods
+5. Passing Thoughts - Hooks
 
 Comming soon:
-5. Passing Thoughts - Hooks
 6. Video Player - Stateless Components From Stateful Components
 7. Copycat - Advanced React
 
